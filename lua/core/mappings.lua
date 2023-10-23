@@ -18,8 +18,8 @@ vim.keymap.set('n', '\\', ':split<CR>')
 
 -- Other
 vim.keymap.set('n', '<leader>w', ':w<CR>')
-vim.keymap.set('n', '<leader>x', ':BufferLinePickClose<CR>')
-vim.keymap.set('n', '<leader>X', ':BufferLineCloseRight<CR>')
+vim.keymap.set('n', '<leader>X', ':BufferLinePickClose<CR>')
+vim.keymap.set('n', '<leader>x', ':BufferLineCloseRight<CR>')
 vim.keymap.set('n', '<leader>s', ':BufferLineSortByTabs<CR>')
 vim.keymap.set('i', 'jj', '<Esc>')
 vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
@@ -30,6 +30,5 @@ vim.keymap.set('n', '<s-Tab>', ':BufferLineCyclePrev<CR>')
 
 -- Terminal
 vim.keymap.set('n', '<F7>', ':ToggleTerm direction=float<CR>')
-
 vim.keymap.set('n', '<leader>th', ':ToggleTerm direction=horizontal<CR>')
 vim.keymap.set('n', '<leader>tv', ':ToggleTerm direction=vertical size=40<CR>')
