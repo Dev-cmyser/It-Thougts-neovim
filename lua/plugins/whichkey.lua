@@ -18,8 +18,8 @@ wk.register({
     c = {name = "Comment", l = "Comment Line"},
     l = {
         name = "LSP",
-        d = "Diagnostic",
-        D = "Hover diagnostic",
+        D = "Diagnostic",
+        d = "Hover diagnostic",
         f = "Format",
         r = "Rename",
         a = "Action",
