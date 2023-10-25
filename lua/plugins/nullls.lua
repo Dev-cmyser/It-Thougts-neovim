@@ -9,7 +9,8 @@ null_ls.setup({
             "typescriptreact",
             "javascriptreact", 
             "javascriptvue",
-            "typescriptvue"
+            "typescriptvue",
+            "vue"
 
         } },
         null_ls.builtins.formatting.lua_format,
