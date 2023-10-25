@@ -32,8 +32,14 @@ git clone https://github.com/Dev-cmyser/purple-nvim $HOME\AppData\Local\nvim
 
 ## if the above path doesnt work, try any of these paths :
 
+```bash
 %LOCALAPPDATA%\nvim
+```
 
+```bash
 %USERPROFILE%AppDataLocal\nvim
+```
 
+```bash
 C:Users%USERNAME%AppDataLocal\nvim
+```
