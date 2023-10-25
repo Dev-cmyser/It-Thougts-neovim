@@ -18,15 +18,17 @@ vim.keymap.set('n', '\\', ':split<CR>')
 
 -- Other
 vim.keymap.set('n', '<leader>w', ':w<CR>')
-vim.keymap.set('n', '<leader>x', ':BufferLinePickClose<CR>')
-vim.keymap.set('n', '<leader>X', ':BufferLineCloseRight<CR>')
-vim.keymap.set('n', '<leader>s', ':BufferLineSortByTabs<CR>')
+--vim.keymap.set('n', '<leader>X', ':BufferLinePickClose<CR>')
+ 
+vim.keymap.set('n', '<leader>X', ':BufferClose<CR>')
+vim.keymap.set('n', '<leader>x', ':BufferLineSortByTabs<CR>:BufferLineCloseRight<CR>')
+vim.keymap.set('n', '<leader>s', ':Neotree show reveal reveal_force_cwd<CR>')
 vim.keymap.set('i', 'jj', '<Esc>')
 vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
 
 
-vim.keymap.set('n', '<Tab>', ':BufferLineCycleNext<CR>')
-vim.keymap.set('n', '<s-Tab>', ':BufferLineCyclePrev<CR>')
+vim.keymap.set('n', '<Tab>', ':BufferLineCycleNext<CR>:Neotree show reveal reveal_force_cwd<CR>')
+vim.keymap.set('n', '<s-Tab>', ':BufferLineCyclePrev<CR>:Neotree show reveal reveal_force_cwd<CR>')
 
 -- Terminal
 vim.keymap.set('n', '<F7>', ':ToggleTerm direction=float<CR>')

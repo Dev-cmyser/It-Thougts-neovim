@@ -15,8 +15,8 @@ vim.opt.shell = "/bin/zsh"
 vim.opt.swapfile = false
 
 -- Mouse
-vim.opt.mouse = ""
-vim.opt.mousefocus = false
+vim.opt.mouse = "a"
+vim.opt.mousefocus = true
 
 -- Line Numbers
 vim.opt.number = true
