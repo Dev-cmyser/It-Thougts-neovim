@@ -9,7 +9,7 @@ rm -rf ~/.config/nvim
 rm -rf ~/.local/share/nvim
 ```
 
-## Windows
+### Windows
 
 ```bash
 rd -r ~\AppData\Local\nvim
@@ -24,13 +24,13 @@ rd -r ~\AppData\Local\nvim-data
 git clone https://github.com/Dev-cmyser/purple-nvim ~/.config/nvim
 ```
 
-## Windows
+### Windows
 
 ```bash
 git clone https://github.com/Dev-cmyser/purple-nvim $HOME\AppData\Local\nvim
 ```
 
-## if the above path doesnt work, try any of these paths :
+### if the above path doesnt work, try any of these paths :
 
 ```bash
 %LOCALAPPDATA%\nvim
