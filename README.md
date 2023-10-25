@@ -30,7 +30,7 @@ git clone https://github.com/Dev-cmyser/purple-nvim ~/.config/nvim
 git clone https://github.com/Dev-cmyser/purple-nvim $HOME\AppData\Local\nvim
 ```
 
-### if the above path doesnt work, try any of these paths :
+#### if the above path doesnt work, try any of these paths :
 
 ```bash
 %LOCALAPPDATA%\nvim
