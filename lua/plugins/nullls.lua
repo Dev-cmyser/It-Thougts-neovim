@@ -7,7 +7,10 @@ null_ls.setup({
             "typescript",
             "javascript",
             "typescriptreact",
-            "javascriptreact"
+            "javascriptreact", 
+            "javascriptvue",
+            "typescriptvue"
+
         } },
         null_ls.builtins.formatting.lua_format,
         null_ls.builtins.diagnostics.eslint_d,
@@ -26,6 +29,7 @@ null_ls.setup({
         "markdown.mdx",
         "graphql",
         "handlebars",
+        "vue",
     },
 }
     },

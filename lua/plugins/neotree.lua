@@ -21,10 +21,10 @@ vim.fn.sign_define("DiagnosticSignHint",
                    {text = "", texthl = "DiagnosticSignHint"})
 
 require("neo-tree").setup({
-    update_focused_file = {
-        enable = true,
-        update_cwd = true, -- Активировать обновление CWD
-    },
+    -- update_focused_file = {
+    --     enable = true,
+    --     update_cwd = true, -- Активировать обновление CWD
+    -- },
     window = {
         mappings = {
             ["o"] = "open",
