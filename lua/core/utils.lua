@@ -3,7 +3,11 @@ _G.close_and_go_right = function()
     local current_buf = vim.api.nvim_get_current_buf()
     local next_buf = nil
     local buf_list = vim.api.nvim_list_bufs()
-
+   
+-- Если только один буфер, просто возвращаемся и ничего не делаем
+    if #buf_list == 1 then
+        return
+    end
     -- Найдем следующий буфер
     for i, buf in ipairs(buf_list) do
         if buf == current_buf and i < #buf_list then

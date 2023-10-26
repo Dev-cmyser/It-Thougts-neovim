@@ -12,7 +12,7 @@ require("bufferline").setup {
         },
         diagnostics = "nvim_lsp",
         indicator = {
-            icon = '', -- this should be omitted if indicator style is not 'icon'
+            icon = '', -- this should be omitted if indicator style is not 'icon'
             style = 'icon'
         },
         -- separator_style = "slope"
