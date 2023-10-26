@@ -2,7 +2,9 @@ vim.g.mapleader = " "
 
 -- NeoTree
 -- vim.keymap.set('n', '<leader>7', ':Neotree float reveal<CR>')
-vim.keymap.set('n', '<leader>e', ':Neotree left reveal<CR>')
+-- vim.keymap.set('n', '<leader>e', ':Neotree left reveal<CR>')
+
+vim.api.nvim_set_keymap('n', '<leader>e', ':lua _G.toggle_neotree()<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>o', ':Neotree float git_status<CR>')
 
 -- Navigation

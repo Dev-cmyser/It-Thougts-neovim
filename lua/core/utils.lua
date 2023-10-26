@@ -34,3 +34,16 @@ _G.close_and_go_right = function()
         vim.api.nvim_set_current_buf(next_buf)
     end
 end
+
+vim.g.neotree_open = false
+
+_G.toggle_neotree = function()
+    if vim.g.neotree_open then
+        vim.cmd("Neotree close")
+        vim.g.neotree_open = false
+    else
+        vim.cmd("Neotree reveal")
+        vim.g.neotree_open = true
+    end
+end
+
