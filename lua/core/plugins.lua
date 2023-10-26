@@ -9,15 +9,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-    --  {
-    --     'neoclide/coc.nvim',
-    --     branch = 'release'
-    -- },
-    -- {
-    --     'yaegassy/coc-volar',
-    --     branch = 'master',
-    --     lazy = false
-    -- },
     {
         'nvim-telescope/telescope.nvim',
         tag = '0.1.1',
@@ -33,7 +24,8 @@ require("lazy").setup({
             'nvim-tree/nvim-web-devicons', 'linrongbin16/lsp-progress.nvim'
         }
     }, {'nvim-tree/nvim-web-devicons'},
-    {"williamboman/mason.nvim", build = ":MasonUpdate"},
+    {'williamboman/mason.nvim'},
+    { 'ggandor/leap.nvim'},
     {'akinsho/toggleterm.nvim', version = "*", config = true},
     {'jose-elias-alvarez/null-ls.nvim'}, {'windwp/nvim-autopairs'},
     {'Djancyp/outline'}, {'terrortylor/nvim-comment'},
