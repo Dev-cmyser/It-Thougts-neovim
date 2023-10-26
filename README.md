@@ -1,5 +1,7 @@
 # purple-nvim
 
+### It's fork from https://github.com/AlariCode/purpleschool-neovim
+
 # Uninstall
 
 ## Linux / Macos (unix)
