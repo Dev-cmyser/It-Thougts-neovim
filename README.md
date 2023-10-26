@@ -50,3 +50,6 @@ use "w" or "o" or Tab
 
 
 ![image](https://github.com/Dev-cmyser/purple-nvim/assets/105227884/5c7e3b0a-63a2-4258-a5e8-ab813df70288)
+
+
+
