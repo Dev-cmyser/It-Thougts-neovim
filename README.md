@@ -1,5 +1,7 @@
 # purple-nvim
 
+### It's fork from https://github.com/AlariCode/purpleschool-neovim
+
 # Uninstall
 
 ## Linux / Macos (unix)
@@ -49,7 +51,8 @@ C:Users%USERNAME%AppDataLocal\nvim
 use "w" or "o" or Tab
 
 
-![image](https://github.com/Dev-cmyser/purple-nvim/assets/105227884/5c7e3b0a-63a2-4258-a5e8-ab813df70288)
+![image](https://github.com/Dev-cmyser/oh-my-purple-neovim/assets/105227884/e2556c4d-dc68-4d5e-9217-5db8872db7fc)
+
 
 
 
