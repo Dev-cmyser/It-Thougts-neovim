@@ -3,6 +3,7 @@ require("core.mappings")
 require("core.plugins")
 require("core.colors")
 require("core.configs")
+require("core.utils")
 
 -- Plugins config
 require("plugins.telescope")

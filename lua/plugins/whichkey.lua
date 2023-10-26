@@ -15,7 +15,7 @@ wk.register({
     t = {name = "Terminal", f = {"Float terminal"}, h = {"Horizontal terminal"}},
     h = {"No highlight"},
     g = {name = "Git", b = "Branches", c = "Commits", s = "Status"},
-    c = {name = "Comment", l = "Comment Line"},
+    c = {name = "Close bufer" },
     l = {
         name = "LSP",
         D = "Diagnostic",
