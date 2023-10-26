@@ -20,7 +20,7 @@ vim.keymap.set('n', '\\', ':split<CR>')
 vim.keymap.set('n', '<leader>w', ':w<CR>')
 --vim.keymap.set('n', '<leader>X', ':BufferLinePickClose<CR>')
  
-vim.keymap.set('n', '<leader>X', ':BufferClose<CR>')
+vim.keymap.set('n', '<leader>c', ':bd<CR>')
 vim.keymap.set('n', '<leader>x', ':BufferLineSortByTabs<CR>:BufferLineCloseRight<CR>') 
 vim.keymap.set('n', '<leader>s', ':Neotree show reveal reveal_force_cwd<CR>')
 vim.keymap.set('i', 'jj', '<Esc>')
