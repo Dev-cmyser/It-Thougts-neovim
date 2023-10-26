@@ -9,6 +9,15 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+    --  {
+    --     'neoclide/coc.nvim',
+    --     branch = 'release'
+    -- },
+    -- {
+    --     'yaegassy/coc-volar',
+    --     branch = 'master',
+    --     lazy = false
+    -- },
     {
         'nvim-telescope/telescope.nvim',
         tag = '0.1.1',
