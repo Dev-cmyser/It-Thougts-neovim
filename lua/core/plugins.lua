@@ -35,6 +35,13 @@ require("lazy").setup({
 			"linrongbin16/lsp-progress.nvim",
 		},
 	},
+	{
+		"mhartington/formatter.nvim",
+		event = "VeryLazy",
+		opts = function()
+			return require("plugins.formatter")
+		end,
+	},
 	{ "nvim-tree/nvim-web-devicons" },
 	{ "williamboman/mason.nvim", build = ":MasonUpdate" },
 	{ "ggandor/leap.nvim" },
