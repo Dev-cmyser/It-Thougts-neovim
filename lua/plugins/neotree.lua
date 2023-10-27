@@ -18,16 +18,15 @@ vim.fn.sign_define("DiagnosticSignWarn",
 vim.fn.sign_define("DiagnosticSignInfo",
                    {text = " ", texthl = "DiagnosticSignInfo"})
 vim.fn.sign_define("DiagnosticSignHint",
-                   {text = "", texthl = "DiagnosticSignHint"})
+                   {text = "", texthl = "DiagnosticSignHint"})
 
+--    
 require("neo-tree").setup({
     window = {
         mappings = {
             ["R"] = "refresh",
             ["o"] = "open",
             ["w"] = "open",-- открыть/закрыть файл или директорию
-    
-    
         }
     },
 })
