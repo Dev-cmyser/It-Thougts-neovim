@@ -4,7 +4,7 @@ capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 local lspconfig = require('lspconfig')
 lspconfig.pyright.setup {}
 lspconfig.tsserver.setup {}
-lspconfig.prismals.s tup {}
+lspconfig.prismals.setup {}
 lspconfig.cssls.setup {
     capabilities = capabilities
 }
