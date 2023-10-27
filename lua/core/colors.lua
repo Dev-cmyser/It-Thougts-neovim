@@ -11,3 +11,5 @@ function SetColor(color)
 end
 
 SetColor('kanagawa-wave')
+-- SetColor('onenord')
+-- SetColor('onedark')

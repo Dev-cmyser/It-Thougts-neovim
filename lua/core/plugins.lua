@@ -19,6 +19,7 @@ require("lazy").setup({
 		dependencies = { "nvim-lua/plenary.nvim" },
 	},
 	{ "cooperuser/glowbeam.nvim" },
+    { "rmehri01/onenord.nvim" },
 	{ "joshdick/onedark.vim" },
 	{ "rebelot/kanagawa.nvim" },
 	{ "nvim-treesitter/nvim-treesitter" },
