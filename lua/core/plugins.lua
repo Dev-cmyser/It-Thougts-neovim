@@ -11,6 +11,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+
 require("lazy").setup({
 	{
 		"nvim-telescope/telescope.nvim",
@@ -43,7 +44,7 @@ require("lazy").setup({
 		end,
 	},
 	{ "nvim-tree/nvim-web-devicons" },
-	{ "williamboman/mason.nvim", build = ":MasonUpdate" },
+{ "williamboman/mason.nvim" },
 
 	-- fast move in  current screen
 	{ "ggandor/leap.nvim" },
