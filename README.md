@@ -23,13 +23,13 @@ rd -r ~\AppData\Local\nvim-data
 ## Linux / Macos
 
 ```bash
-git clone https://github.com/Dev-cmyser/purple-nvim ~/.config/nvim
+git clone https://github.com/Dev-cmyser/It-Thougts-neovim ~/.config/nvim
 ```
 
 ### Windows
 
 ```bash
-git clone https://github.com/Dev-cmyser/purple-nvim $HOME\AppData\Local\nvim
+git clone https://github.com/Dev-cmyser/It-Thougts-neovim $HOME\AppData\Local\nvim
 ```
 
 #### if the above path doesnt work, try any of these paths :
