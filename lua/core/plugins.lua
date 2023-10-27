@@ -44,7 +44,10 @@ require("lazy").setup({
 	},
 	{ "nvim-tree/nvim-web-devicons" },
 	{ "williamboman/mason.nvim", build = ":MasonUpdate" },
+
+	-- fast move in  current screen
 	{ "ggandor/leap.nvim" },
+
 	{ "akinsho/toggleterm.nvim", version = "*", config = true },
 	{ "jose-elias-alvarez/null-ls.nvim" },
 	{ "windwp/nvim-autopairs" },
