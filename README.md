@@ -1,4 +1,4 @@
-# purple-nvim
+# It Thougts neovim
 
 ### It's fork from https://github.com/AlariCode/purpleschool-neovim
 
