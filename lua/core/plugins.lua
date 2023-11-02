@@ -11,7 +11,6 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-
 require("lazy").setup({
 	{
 		"nvim-telescope/telescope.nvim",
@@ -19,7 +18,7 @@ require("lazy").setup({
 		dependencies = { "nvim-lua/plenary.nvim" },
 	},
 	{ "cooperuser/glowbeam.nvim" },
-    { "rmehri01/onenord.nvim" },
+	{ "rmehri01/onenord.nvim" },
 	{ "joshdick/onedark.vim" },
 	{ "rebelot/kanagawa.nvim" },
 	{ "nvim-treesitter/nvim-treesitter" },
@@ -45,8 +44,22 @@ require("lazy").setup({
 		end,
 	},
 	{ "nvim-tree/nvim-web-devicons" },
-{ "williamboman/mason.nvim" },
+	{ "williamboman/mason.nvim" },
 
+	{
+		"APZelos/blamer.nvim",
+		cmd = { "Blamer" },
+		-- event = "User AstroFile",
+		lazy = false,
+		config = function()
+			vim.g.blamer_delay = 900
+			vim.g.blamer_show_in_insert_modes = 0
+			vim.g.blamer_prefix = " > "
+			vim.g.blamer_show_in_visual_modes = 0
+			vim.g.blamer_enabled = 1
+			-- vim.o.highlight Blamer g uifg="lightgrey"
+		end,
+	},
 	-- fast move in  current screen
 	{ "ggandor/leap.nvim" },
 
