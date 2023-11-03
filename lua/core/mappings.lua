@@ -22,6 +22,8 @@ vim.keymap.set("n", "|", ":vsplit<CR>")
 vim.keymap.set("n", "\\", ":split<CR>")
 
 -- Other
+vim.keymap.set("n", "<s-J>", "")
+vim.keymap.set("v", "<s-J>", "")
 vim.keymap.set("n", "<leader>w", ":w<CR>")
 --vim.keymap.set('n', '<leader>X', ':BufferLinePickClose<CR>')
 
