@@ -1,3 +1,76 @@
+-- _G.close_and_go_right = function()
+-- 	vim.cmd("let b:cursor_pos = [line('.'), col('.')]")
+--
+-- 	local current_buf = vim.api.nvim_get_current_buf()
+-- 	local buf_list = vim.fn.getbufinfo({ buflisted = 1 })
+--
+-- 	-- Если только один буфер, ничего не делаем
+-- 	if #buf_list == 1 then
+-- 		return
+-- 	end
+--
+-- 	for i, buf in ipairs(buf_list) do
+-- 		if buf.bufnr == current_buf then
+-- 			-- Если текущий буфер найден, закрываем его
+-- 			vim.cmd("bdelete " .. current_buf)
+--
+-- 			if vim.b.cursor_pos then
+-- 				vim.api.nvim_win_set_cursor(0, vim.b.cursor_pos)
+-- 			end
+-- 			-- Переходим к следующему буферу справа, если он существует
+-- 			if i < #buf_list then
+-- 				vim.cmd("buffer " .. buf_list[i + 1].bufnr)
+-- 			else -- Иначе переходим к предыдущему буферу слева
+-- 				vim.cmd("buffer " .. buf_list[i - 1].bufnr)
+-- 			end
+-- 			break
+-- 		end
+-- 	end
+-- end
+--
+
+-- _G.close_and_go_right = function()
+-- 	local current_buf = vim.api.nvim_get_current_buf()
+-- 	local buf_list = vim.fn.getbufinfo({ buflisted = 1 })
+-- 	local current_win = vim.api.nvim_get_current_win()
+-- 	local cursor_pos = vim.api.nvim_win_get_cursor(current_win)
+--
+-- 	-- Если только один буфер, ничего не делаем
+-- 	if #buf_list == 1 then
+-- 		return
+-- 	end
+--
+-- 	local next_bufnr = nil
+-- 	for i, buf in ipairs(buf_list) do
+-- 		if buf.bufnr == current_buf then
+-- 			-- Если текущий буфер найден, определяем следующий буфер
+-- 			next_bufnr = buf_list[i % #buf_list + 1].bufnr
+-- 			break
+-- 		end
+-- 	end
+--
+-- 	-- Переходим к следующему буферу
+-- 	vim.cmd("buffer " .. next_bufnr)
+--
+-- 	-- Восстанавливаем позицию курсора в новом буфере
+-- 	vim.defer_fn(function()
+-- 		local win_id = vim.fn.bufwinid(next_bufnr)
+-- 		if win_id ~= -1 then
+-- 			local last_line = vim.api.nvim_buf_line_count(next_bufnr)
+-- 			cursor_pos[1] = math.min(cursor_pos[1], last_line)
+-- 			local last_col = #vim.api.nvim_buf_get_lines(next_bufnr, cursor_pos[1] - 1, cursor_pos[1], false)[1]
+-- 			cursor_pos[2] = math.min(cursor_pos[2], last_col)
+-- 			vim.api.nvim_win_set_cursor(win_id, cursor_pos)
+-- 		end
+-- 		-- Закрываем предыдущий буфер после небольшой задержки, чтобы избежать проблем с позицией курсора
+-- 		vim.cmd("bdelete " .. current_buf)
+-- 	end, 10) -- Задержка в 10 мс, чтобы дать время на открытие буфера
+-- end
+--
+
+-- Инициализируем таблицу для хранения позиций курсора
+_G.cursor_positions = _G.cursor_positions or {}
+
 _G.close_and_go_right = function()
 	local current_buf = vim.api.nvim_get_current_buf()
 	local buf_list = vim.fn.getbufinfo({ buflisted = 1 })
@@ -7,77 +80,36 @@ _G.close_and_go_right = function()
 		return
 	end
 
+	-- Сохраняем текущую позицию курсора для текущего буфера
+	_G.cursor_positions[current_buf] = vim.api.nvim_win_get_cursor(0)
+
+	-- Находим следующий буфер
+	local next_bufnr
 	for i, buf in ipairs(buf_list) do
 		if buf.bufnr == current_buf then
-			-- Если текущий буфер найден, закрываем его
-			vim.cmd("bdelete " .. current_buf)
-
-			-- Переходим к следующему буферу справа, если он существует
-			if i < #buf_list then
-				vim.cmd("buffer " .. buf_list[i + 1].bufnr)
-			else -- Иначе переходим к предыдущему буферу слева
-				vim.cmd("buffer " .. buf_list[i - 1].bufnr)
-			end
+			next_bufnr = buf_list[i % #buf_list + 1].bufnr
 			break
 		end
 	end
-end
---
--- _G.close_and_go_right = function()
--- 	local current_buf = vim.api.nvim_get_current_buf()
--- 	local buf_list = vim.fn.getbufinfo({ buflisted = 1 })
---
--- 	-- Если только один буфер или текущий буфер последний, ничего не делаем
--- 	if #buf_list == 1 or current_buf == buf_list[#buf_list].bufnr then
--- 		return
--- 	end
---
--- 	for i, buf in ipairs(buf_list) do
--- 		if buf.bufnr == current_buf then
--- 			-- Если текущий буфер найден, закрываем его
--- 			vim.cmd("bdelete " .. current_buf)
--- 			-- Переходим к следующему буферу
--- 			vim.cmd("buffer " .. buf_list[i + 1].bufnr)
--- 			break
--- 		end
--- 	end
--- end
 
--- _G.close_and_go_right = function()
--- 	local current_buf = vim.api.nvim_get_current_buf()
--- 	local next_buf = nil
--- 	local buf_list = vim.api.nvim_list_bufs()
---
--- 	-- Если только один буфер, просто возвращаемся и ничего не делаем
--- 	if #buf_list == 1 then
--- 		return 1
--- 	end
--- 	-- Найдем следующий буфер
--- 	for i, buf in ipairs(buf_list) do
--- 		if buf == current_buf and i < #buf_list then
--- 			next_buf = buf_list[i + 1]
--- 			break
--- 		end
--- 	end
---
--- 	-- Если следующего буфера нет, возьмем предыдущий
--- 	if not next_buf then
--- 		for i, buf in ipairs(buf_list) do
--- 			if buf == current_buf and i > 1 then
--- 				next_buf = buf_list[i - 1]
--- 				break
--- 			end
--- 		end
--- 	end
---
--- 	-- Удаляем текущий буфер
--- 	vim.api.nvim_buf_delete(current_buf, {})
---
--- 	-- Переходим к следующему буферу
--- 	if next_buf then
--- 		vim.api.nvim_set_current_buf(next_buf)
--- 	end
--- end
+	-- Переходим к следующему буферу и закрываем текущий
+	vim.cmd("buffer " .. next_bufnr)
+	vim.cmd("bdelete " .. current_buf)
+
+	-- Восстанавливаем позицию курсора для нового буфера, если она была сохранена
+	local new_cursor_pos = _G.cursor_positions[next_bufnr]
+	if new_cursor_pos then
+		local win_id = vim.fn.bufwinid(next_bufnr)
+		if win_id ~= -1 then
+			-- Убедимся, что позиция курсора находится в пределах нового буфера
+			local line_count = vim.api.nvim_buf_line_count(next_bufnr)
+			new_cursor_pos[1] = math.min(new_cursor_pos[1], line_count)
+			local col_count = #vim.api.nvim_buf_get_lines(next_bufnr, new_cursor_pos[1] - 1, new_cursor_pos[1], true)[1]
+			new_cursor_pos[2] = math.min(new_cursor_pos[2], col_count)
+			vim.api.nvim_win_set_cursor(win_id, new_cursor_pos)
+		end
+	end
+end
 
 vim.g.neotree_open = false
 
