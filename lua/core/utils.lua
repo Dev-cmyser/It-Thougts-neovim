@@ -22,7 +22,7 @@ _G.close_and_go_right = function()
 		end
 	end
 end
-
+--
 -- _G.close_and_go_right = function()
 -- 	local current_buf = vim.api.nvim_get_current_buf()
 -- 	local buf_list = vim.fn.getbufinfo({ buflisted = 1 })

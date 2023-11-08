@@ -14,6 +14,10 @@ vim.opt.undofile = true
 vim.opt.shell = "/bin/zsh"
 vim.opt.swapfile = false
 
+-- Вы можете также установить уровень сворачивания, например 'foldlevel'
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+vim.wo.foldlevel = 99
 -- Mouse
 vim.opt.mouse = "a"
 vim.opt.mousefocus = true
@@ -41,14 +45,14 @@ vim.opt.smartindent = true
 
 -- Fillchars
 vim.opt.fillchars = {
-    vert = "│",
-    fold = "⠀",
-    eob = " ", -- suppress ~ at EndOfBuffer
-    -- diff = "⣿", -- alternatives = ⣿ ░ ─ ╱
-    msgsep = "‾",
-    foldopen = "▾",
-    foldsep = "│",
-    foldclose = "▸"
+	vert = "│",
+	fold = "⠀",
+	eob = " ", -- suppress ~ at EndOfBuffer
+	-- diff = "⣿", -- alternatives = ⣿ ░ ─ ╱
+	msgsep = "‾",
+	foldopen = "▾",
+	foldsep = "│",
+	foldclose = "▸",
 }
 
 vim.cmd([[highlight clear LineNr]])
