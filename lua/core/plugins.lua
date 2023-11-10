@@ -17,6 +17,7 @@ require("lazy").setup({
 		tag = "0.1.1",
 		dependencies = { "nvim-lua/plenary.nvim" },
 	},
+	{ "folke/zen-mode.nvim", lazy = false },
 	{ "cooperuser/glowbeam.nvim" },
 	{ "rmehri01/onenord.nvim" },
 	{ "joshdick/onedark.vim" },
