@@ -59,31 +59,3 @@ vim.keymap.set("n", "<s-L>", ":BufferLineCycleNext<CR>:Neotree show reveal revea
 vim.keymap.set("n", "<F7>", ":ToggleTerm direction=float<CR>")
 vim.keymap.set("n", "<leader>th", ":ToggleTerm direction=horizontal<CR>")
 vim.keymap.set("n", "<leader>tv", ":ToggleTerm direction=vertical size=40<CR>")
-
--- Русский язык
-vim.keymap.set("n", "<leader>ц", ":w<CR>")
-vim.keymap.set("n", "<leader>.", ":CommentToggle<CR>")
-vim.keymap.set("v", "<leader>.", ":CommentToggle<CR>")
-vim.keymap.set("i", "оо", "<Esc>")
--- Перемещение влево (аналог клавиши 'h')
-vim.keymap.set("n", "р", "h")
-vim.keymap.set("v", "р", "h")
--- Перемещение вниз (аналог клавиши 'j')
-vim.keymap.set("n", "о", "j")
-vim.keymap.set("v", "о", "j")
-
--- Перемещение вверх (аналог клавиши 'k')
-vim.keymap.set("n", "л", "k")
-vim.keymap.set("v", "л", "k")
-
--- Перемещение вправо (аналог клавиши 'l')
-vim.keymap.set("n", "д", "l")
-vim.keymap.set("v", "д", "l")
-
-vim.keymap.set("n", "вв", "dd")
-vim.keymap.set("n", "ф", "a")
-vim.keymap.set("n", "ш", "i")
-vim.keymap.set("n", "з", "p")
-vim.keymap.set("n", "г", "u")
-vim.keymap.set("n", "н", "y")
-vim.keymap.set("n", "к", "r")
