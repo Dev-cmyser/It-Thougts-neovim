@@ -39,7 +39,8 @@ vim.keymap.set("n", "<leader>8", ":set foldlevel=8<CR>")
 vim.api.nvim_set_keymap("n", "<leader>c", ":lua _G.close_and_go_right()<CR>", { noremap = true, silent = true })
 -- vim.keymap.set('n', '<leader>c', ':bd<CR>:bprev<CR>')
 vim.keymap.set("n", "<leader>x", ":BufferLineSortByTabs<CR>:BufferLineCloseRight<CR>")
-vim.keymap.set("n", "<leader>s", ":Neotree show reveal reveal_force_cwd<CR>")
+-- vim.keymap.set("n", "<leader>s", ":Neotree show reveal reveal_force_cwd<CR>")
+vim.keymap.set("n", "<leader>s", ":Neotree show reveal <CR>")
 vim.keymap.set("i", "jj", "<Esc>")
 vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>")
 
@@ -49,11 +50,11 @@ end, { expr = true })
 -- vim.keymap.set('n', '<Tab>', ':BufferLineCycleNext<CR>:Neotree show reveal reveal_force_cwd<CR>')
 -- vim.keymap.set('n', '<s-Tab>', ':BufferLineCyclePrev<CR>:Neotree show reveal reveal_force_cwd<CR>')
 
-vim.keymap.set("n", "<Tab>", ":BufferLineCycleNext<CR>:Neotree show reveal reveal_force_cwd<CR>")
-vim.keymap.set("n", "<s-Tab>", ":BufferLineCyclePrev<CR>:Neotree show reveal reveal_force_cwd<CR>")
+vim.keymap.set("n", "<Tab>", ":BufferLineCycleNext<CR>:Neotree show reveal <CR>")
+vim.keymap.set("n", "<s-Tab>", ":BufferLineCyclePrev<CR>:Neotree show reveal <CR>")
 
-vim.keymap.set("n", "<s-H>", ":BufferLineCyclePrev<CR>:Neotree show reveal reveal_force_cwd<CR>")
-vim.keymap.set("n", "<s-L>", ":BufferLineCycleNext<CR>:Neotree show reveal reveal_force_cwd<CR>")
+vim.keymap.set("n", "<s-H>", ":BufferLineCyclePrev<CR>:Neotree show reveal <CR>")
+vim.keymap.set("n", "<s-L>", ":BufferLineCycleNext<CR>:Neotree show reveal <CR>")
 
 -- Terminal
 vim.keymap.set("n", "<F7>", ":ToggleTerm direction=float<CR>")

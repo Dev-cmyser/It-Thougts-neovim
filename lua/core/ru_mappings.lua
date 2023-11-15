@@ -58,3 +58,7 @@ vim.keymap.set("n", "<leader>ч", ":BufferLineSortByTabs<CR>:BufferLineCloseRigh
 -- Выделение
 vim.keymap.set("n", "м", "v")
 vim.keymap.set("n", "М", "V")
+
+-- Дерево
+-- vim.api.nvim_set_keymap("n", "<leader>e", ":lua _G.toggle_neotree()<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>у", "<leader>e")
