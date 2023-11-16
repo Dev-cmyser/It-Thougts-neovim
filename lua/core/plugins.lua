@@ -18,7 +18,6 @@ require("lazy").setup({
 		dependencies = { "nvim-lua/plenary.nvim" },
 	},
 	{ "folke/zen-mode.nvim", lazy = false },
-	{ "lewis6991/impatient.nvim", lazy = false },
 	{ "cooperuser/glowbeam.nvim" },
 	{ "rmehri01/onenord.nvim" },
 	{ "joshdick/onedark.vim" },
