@@ -48,7 +48,7 @@ C:Users%USERNAME%AppDataLocal\nvim
 
 # Usage
 ## Open files 
-use "w" or "o" or Tab
+use "w" or "o" or Enter
 
 
 ![image](https://github.com/Dev-cmyser/It-Thougts-neovim/assets/105227884/1a8915a9-2b6a-4f11-a653-c9eaecd8d1cd)
@@ -77,7 +77,7 @@ use "w" or "o" or Tab
     - `Shift + Tab`: Cycles to the previous buffer and reveals NeoTree.
     - `Shift + H` and `Shift + L`: Also cycles through buffers and reveals NeoTree.
 6. **Terminal**:
-    - `F7`: Toggles terminal in floating mode.
+    - `F7`: Toggles terminal in floating mode. ( open and close )
 7. **Telescope**:
     - `Space + f + f`: Find file by name (without gitignore)
     - `Space + f + w`: Find text in files (without gitignore)
