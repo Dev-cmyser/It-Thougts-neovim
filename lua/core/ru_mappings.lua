@@ -1,11 +1,11 @@
 -- Русский язык
 
 -- Сохранение файла
-vim.keymap.set("n", "<leader>ц", ":w<CR>")
+-- vim.keymap.set("n", "<leader>ц", ":w<CR>")
 
 -- КОментирование ( любое количество строк )
-vim.keymap.set("n", "<leader>.", ":CommentToggle<CR>")
-vim.keymap.set("v", "<leader>.", ":CommentToggle<CR>")
+-- vim.keymap.set("n", "<leader>.", ":CommentToggle<CR>")
+-- vim.keymap.set("v", "<leader>.", ":CommentToggle<CR>")
 
 -- В Нормальный режим
 vim.keymap.set("i", "оо", "<Esc>")
@@ -29,6 +29,7 @@ vim.keymap.set("v", "д", "l")
 -- Удаление
 vim.keymap.set("n", "в", "d")
 vim.keymap.set("n", "вв", "dd")
+vim.keymap.set("n", "ч", "x")
 
 -- Go to Insert mode
 vim.keymap.set("n", "ф", "a")
@@ -37,28 +38,28 @@ vim.keymap.set("n", "Щ", "O")
 vim.keymap.set("n", "ш", "i")
 
 --  Вставка
-vim.keymap.set("n", "з", "p")
+-- vim.keymap.set("n", "з", "p")
 
 -- Отмена действия
-vim.keymap.set("n", "г", "u")
+-- vim.keymap.set("n", "г", "u")
 
 -- Копирование
-vim.keymap.set("n", "н", "y")
+-- vim.keymap.set("n", "н", "y")
 
 -- Замена replace
-vim.keymap.set("n", "к", "r")
+-- vim.keymap.set("n", "к", "r")
 
 -- Пермещение между вкладками ( буфферами )
-vim.keymap.set("n", "<s-Р>", "<s-H>")
-vim.keymap.set("n", "<s-Д>", "<s-L>")
+-- vim.keymap.set("n", "<s-Р>", "<s-H>")
+-- vim.keymap.set("n", "<s-Д>", "<s-L>")
 
 -- Закрытие всех буферов
-vim.keymap.set("n", "<leader>ч", ":BufferLineSortByTabs<CR>:BufferLineCloseRight<CR>")
+-- vim.keymap.set("n", "<leader>ч", ":BufferLineSortByTabs<CR>:BufferLineCloseRight<CR>")
 
 -- Выделение
-vim.keymap.set("n", "м", "v")
-vim.keymap.set("n", "М", "V")
+-- vim.keymap.set("n", "м", "v")
+-- vim.keymap.set("n", "М", "V")
 
 -- Дерево
 -- vim.api.nvim_set_keymap("n", "<leader>e", ":lua _G.toggle_neotree()<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "<leader>у", "<leader>e")
+-- vim.keymap.set("n", "<leader>у", "<leader>e")
