@@ -32,7 +32,7 @@ vim.opt.splitright = true
 
 -- Clipboard
 vim.opt.clipboard = "unnamedplus"
-
+vim.api.nvim_set_keymap("x", "p", '"_dP', { noremap = true, silent = true })
 -- Shorter messages
 vim.opt.shortmess:append("c")
 
