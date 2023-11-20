@@ -60,8 +60,10 @@ vim.keymap.set("n", "Д", ":BufferLineCycleNext<CR>:Neotree show reveal<CR>")
 
 -- Закрытие всех буферов
 vim.keymap.set("n", "<leader>ч", ":BufferLineSortByTabs<CR>:BufferLineCloseRight<CR>")
+-- одного
+vim.keymap.set("n", "<leader>Ч", ":BufferLinePickClose<CR>")
 
--- Выделение
+-- ВыделениЧ
 vim.keymap.set("n", "м", "v")
 vim.keymap.set("v", "м", "v")
 vim.keymap.set("n", "М", "V")
@@ -82,3 +84,6 @@ vim.keymap.set("n", "пп", "gg")
 vim.keymap.set("v", "пп", "gg")
 vim.keymap.set("n", "П", "G")
 vim.keymap.set("v", "П", "G")
+
+-- Показать файл в дереве
+vim.keymap.set("n", "<leader>ы", ":Neotree show reveal <CR>")
