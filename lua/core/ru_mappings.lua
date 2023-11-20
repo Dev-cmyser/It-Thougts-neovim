@@ -55,8 +55,8 @@ vim.keymap.set("v", "н", "yy")
 vim.keymap.set("n", "к", "r")
 
 -- Пермещение между вкладками ( буфферами )
-vim.keymap.set("n", "<Shift>Р", ":BufferLineCyclePrev<CR>:Neotree show reveal<CR>")
-vim.keymap.set("n", "<Shift>Д", ":BufferLineCycleNext<CR>:Neotree show reveal<CR>")
+vim.keymap.set("n", "Р", ":BufferLineCyclePrev<CR>:Neotree show reveal<CR>")
+vim.keymap.set("n", "Д", ":BufferLineCycleNext<CR>:Neotree show reveal<CR>")
 
 -- Закрытие всех буферов
 vim.keymap.set("n", "<leader>ч", ":BufferLineSortByTabs<CR>:BufferLineCloseRight<CR>")
