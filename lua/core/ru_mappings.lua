@@ -1,11 +1,11 @@
 -- Русский язык
 
 -- Сохранение файла
--- vim.keymap.set("n", "<leader>ц", ":w<CR>")
+vim.keymap.set("n", "<leader>ц", ":w<CR>")
 
 -- КОментирование ( любое количество строк )
--- vim.keymap.set("n", "<leader>.", ":CommentToggle<CR>")
--- vim.keymap.set("v", "<leader>.", ":CommentToggle<CR>")
+vim.keymap.set("n", "<leader>.", ":CommentToggle<CR>")
+vim.keymap.set("v", "<leader>.", ":CommentToggle<CR>")
 
 -- В Нормальный режим
 vim.keymap.set("i", "оо", "<Esc>")
@@ -36,30 +36,42 @@ vim.keymap.set("n", "ф", "a")
 vim.keymap.set("n", "щ", "o")
 vim.keymap.set("n", "Щ", "O")
 vim.keymap.set("n", "ш", "i")
+vim.keymap.set("v", "с", "c")
 
---  Вставка
--- vim.keymap.set("n", "з", "p")
+-- Вставка
+vim.keymap.set("n", "з", "p")
+vim.keymap.set("v", "з", "p")
 
 -- Отмена действия
--- vim.keymap.set("n", "г", "u")
+vim.keymap.set("n", "г", "u")
 
 -- Копирование
--- vim.keymap.set("n", "н", "y")
+vim.keymap.set("n", "нн", "yy")
+vim.keymap.set("n", "н", "y")
+vim.keymap.set("v", "н", "yy")
 
 -- Замена replace
--- vim.keymap.set("n", "к", "r")
+vim.keymap.set("n", "к", "r")
 
 -- Пермещение между вкладками ( буфферами )
--- vim.keymap.set("n", "<s-Р>", "<s-H>")
--- vim.keymap.set("n", "<s-Д>", "<s-L>")
+vim.keymap.set("n", "<s-р>", ":BufferLineCyclePrev<CR>:Neotree show reveal<CR>")
+vim.keymap.set("n", "<s-д>", ":BufferLineCycleNext<CR>:Neotree show reveal<CR>")
 
 -- Закрытие всех буферов
--- vim.keymap.set("n", "<leader>ч", ":BufferLineSortByTabs<CR>:BufferLineCloseRight<CR>")
+vim.keymap.set("n", "<leader>ч", ":BufferLineSortByTabs<CR>:BufferLineCloseRight<CR>")
 
 -- Выделение
--- vim.keymap.set("n", "м", "v")
--- vim.keymap.set("n", "М", "V")
+vim.keymap.set("n", "м", "v")
+vim.keymap.set("v", "м", "v")
+vim.keymap.set("n", "М", "V")
+vim.keymap.set("v", "М", "V")
 
 -- Дерево
--- vim.api.nvim_set_keymap("n", "<leader>e", ":lua _G.toggle_neotree()<CR>", { noremap = true, silent = true })
--- vim.keymap.set("n", "<leader>у", "<leader>e")
+vim.keymap.set("n", "<leader>у", ":Neotree toggle<CR>")
+vim.keymap.set("n", "<leader>щ", ":Neotree float git_status<CR>")
+
+-- Команды
+vim.keymap.set("n", "Ж", ":")
+
+-- Удаление буфера
+vim.api.nvim_set_keymap("n", "<leader>с", ":lua _G.close_and_go_right()<CR>", { noremap = true, silent = true })

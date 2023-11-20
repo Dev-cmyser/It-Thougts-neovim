@@ -1,12 +1,7 @@
 vim.g.mapleader = " "
 
 -- NeoTree
---
--- vim.keymap.set('n', '<leader>7', ':Neotree float reveal<CR>')
--- vim.keymap.set('n', '<leader>e', ':Neotree left reveal<CR>')
---
--- from utils
-vim.api.nvim_set_keymap("n", "<leader>e", ":lua _G.toggle_neotree()<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>e", ":Neotree toggle<CR>")
 vim.keymap.set("n", "<leader>o", ":Neotree float git_status<CR>")
 
 -- Navigation
@@ -47,8 +42,6 @@ vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>")
 vim.keymap.set("i", "<C-j>", function()
 	return vim.fn["codeium#Accept"]()
 end, { expr = true })
--- vim.keymap.set('n', '<Tab>', ':BufferLineCycleNext<CR>:Neotree show reveal reveal_force_cwd<CR>')
--- vim.keymap.set('n', '<s-Tab>', ':BufferLineCyclePrev<CR>:Neotree show reveal reveal_force_cwd<CR>')
 
 vim.keymap.set("n", "<Tab>", ":BufferLineCycleNext<CR>:Neotree show reveal <CR>")
 vim.keymap.set("n", "<s-Tab>", ":BufferLineCyclePrev<CR>:Neotree show reveal <CR>")
