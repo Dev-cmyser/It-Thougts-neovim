@@ -28,6 +28,7 @@ vim.keymap.set("v", "д", "l")
 
 -- Удаление
 vim.keymap.set("n", "в", "d")
+vim.keymap.set("v", "в", "d")
 vim.keymap.set("n", "вв", "dd")
 vim.keymap.set("n", "ч", "x")
 
@@ -54,8 +55,8 @@ vim.keymap.set("v", "н", "yy")
 vim.keymap.set("n", "к", "r")
 
 -- Пермещение между вкладками ( буфферами )
-vim.keymap.set("n", "<s-р>", ":BufferLineCyclePrev<CR>:Neotree show reveal<CR>")
-vim.keymap.set("n", "<s-д>", ":BufferLineCycleNext<CR>:Neotree show reveal<CR>")
+vim.keymap.set("n", "<Shift>Р", ":BufferLineCyclePrev<CR>:Neotree show reveal<CR>")
+vim.keymap.set("n", "<Shift>Д", ":BufferLineCycleNext<CR>:Neotree show reveal<CR>")
 
 -- Закрытие всех буферов
 vim.keymap.set("n", "<leader>ч", ":BufferLineSortByTabs<CR>:BufferLineCloseRight<CR>")
@@ -75,3 +76,9 @@ vim.keymap.set("n", "Ж", ":")
 
 -- Удаление буфера
 vim.api.nvim_set_keymap("n", "<leader>с", ":lua _G.close_and_go_right()<CR>", { noremap = true, silent = true })
+
+-- В начало и конец файла
+vim.keymap.set("n", "пп", "gg")
+vim.keymap.set("v", "пп", "gg")
+vim.keymap.set("n", "П", "G")
+vim.keymap.set("v", "П", "G")
