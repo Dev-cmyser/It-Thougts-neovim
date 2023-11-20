@@ -20,6 +20,7 @@ vim.keymap.set("n", "\\", ":split<CR>")
 vim.keymap.set("n", "<s-J>", "")
 vim.keymap.set("v", "<s-J>", "")
 vim.keymap.set("n", "<leader>w", ":w<CR>")
+
 -- свернуть все
 vim.keymap.set("n", "<leader>1", ":set foldlevel=1<CR>")
 vim.keymap.set("n", "<leader>2", ":set foldlevel=2<CR>")
@@ -30,19 +31,23 @@ vim.keymap.set("n", "<leader>6", ":set foldlevel=6<CR>")
 vim.keymap.set("n", "<leader>7", ":set foldlevel=7<CR>")
 vim.keymap.set("n", "<leader>8", ":set foldlevel=8<CR>")
 
+-- delete buffer
 vim.api.nvim_set_keymap("n", "<leader>c", ":lua _G.close_and_go_right()<CR>", { noremap = true, silent = true })
--- vim.keymap.set('n', '<leader>c', ':bd<CR>:bprev<CR>')
 vim.keymap.set("n", "<leader>x", ":BufferLineSortByTabs<CR>:BufferLineCloseRight<CR>")
 vim.keymap.set("n", "<leader>X", ":BufferLinePickClose<CR>")
--- vim.keymap.set("n", "<leader>s", ":Neotree show reveal reveal_force_cwd<CR>")
+
+-- show file in three
 vim.keymap.set("n", "<leader>s", ":Neotree show reveal <CR>")
+
 vim.keymap.set("i", "jj", "<Esc>")
+
 vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>")
 
 vim.keymap.set("i", "<C-j>", function()
 	return vim.fn["codeium#Accept"]()
 end, { expr = true })
 
+-- Change buffers
 vim.keymap.set("n", "<Tab>", ":BufferLineCycleNext<CR>:Neotree show reveal <CR>")
 vim.keymap.set("n", "<s-Tab>", ":BufferLineCyclePrev<CR>:Neotree show reveal <CR>")
 
