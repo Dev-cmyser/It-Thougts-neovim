@@ -12,16 +12,22 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+	-- Search by filename and by content
 	{
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.1",
 		dependencies = { "nvim-lua/plenary.nvim" },
 	},
+	-- Zen mode to try :ZenMode
 	{ "folke/zen-mode.nvim", lazy = false },
-	{ "cooperuser/glowbeam.nvim" },
+
+	-- Color schemes
 	{ "rmehri01/onenord.nvim" },
 	{ "joshdick/onedark.vim" },
 	{ "rebelot/kanagawa.nvim" },
+	{ "cooperuser/glowbeam.nvim" },
+
+	-- LSP, cmp  and treesitter
 	{ "nvim-treesitter/nvim-treesitter" },
 	{ "neovim/nvim-lspconfig" },
 	{ "hrsh7th/cmp-nvim-lsp" },
@@ -29,7 +35,17 @@ require("lazy").setup({
 	{ "hrsh7th/cmp-path" },
 	{ "hrsh7th/cmp-cmdline" },
 	{ "hrsh7th/nvim-cmp" },
-	{ "lewis6991/gitsigns.nvim" },
+	{ "hrsh7th/cmp-nvim-lsp-signature-help" },
+	{
+		"linrongbin16/lsp-progress.nvim",
+		event = { "VimEnter" },
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+		config = function()
+			require("lsp-progress").setup()
+		end,
+	},
+
+	-- Lualine - line which show base information ( mode, git branch, etc. )
 	{
 		"nvim-lualine/lualine.nvim",
 		dependencies = {
@@ -37,16 +53,11 @@ require("lazy").setup({
 			"linrongbin16/lsp-progress.nvim",
 		},
 	},
-	{
-		"mhartington/formatter.nvim",
-		event = "VeryLazy",
-		opts = function()
-			return require("plugins.formatter")
-		end,
-	},
-	{ "nvim-tree/nvim-web-devicons" },
+
+	-- Manager for  Installing plugins and lsp
 	{ "williamboman/mason.nvim" },
 
+	-- Blamer - show git sign anywhere
 	{
 		"APZelos/blamer.nvim",
 		cmd = { "Blamer" },
@@ -61,15 +72,20 @@ require("lazy").setup({
 			-- vim.o.highlight Blamer g uifg="lightgrey"
 		end,
 	},
-	-- fast move in  current screen
-	{ "ggandor/leap.nvim" },
 
+	-- Terminal float
 	{ "akinsho/toggleterm.nvim", version = "*", config = true },
+
+	-- Formatter
 	{ "jose-elias-alvarez/null-ls.nvim" },
-	{ "windwp/nvim-autopairs" },
-	{ "Djancyp/outline" },
+
+	-- Coment code
 	{ "terrortylor/nvim-comment" },
+
+	-- Autotag for html
 	{ "windwp/nvim-ts-autotag" },
+
+	-- Tree for files
 	{
 		"nvim-neo-tree/neo-tree.nvim",
 		branch = "v2.x",
@@ -80,80 +96,49 @@ require("lazy").setup({
 			"s1n7ax/nvim-window-picker",
 		},
 	},
+	-- Buffers
 	{ "akinsho/bufferline.nvim", dependencies = { "nvim-tree/nvim-web-devicons" } },
-	{ "hrsh7th/cmp-nvim-lsp-signature-help" },
-	{
-		"linrongbin16/lsp-progress.nvim",
-		event = { "VimEnter" },
-		dependencies = { "nvim-tree/nvim-web-devicons" },
-		config = function()
-			require("lsp-progress").setup()
-		end,
-	},
+
+	-- Codeium
 	{
 		"Exafunction/codeium.vim",
 		lazy = false,
 	},
+	-- Dashboard
 	{
 		"glepnir/dashboard-nvim",
 		event = "VimEnter",
 		dependencies = { { "nvim-tree/nvim-web-devicons" } },
 	},
+
+	-- Three plugins for which-key and helper bar after space 300 mlsec
 	{ "folke/which-key.nvim" },
 	{ "hrsh7th/vim-vsnip" },
 	{ "hrsh7th/vim-vsnip-integ" },
+
+	-- Fast moving and v-mode
 	{
 		"folke/flash.nvim",
 		event = "VeryLazy",
 		---@type Flash.Config
 		opts = {},
-		keys = {
-			{
-				"s",
-				mode = { "n", "x", "o" },
-				function()
-					require("flash").jump({
-						search = {
-							mode = function(str)
-								return "\\<" .. str
-							end,
-						},
-					})
-				end,
-				desc = "Flash",
-			},
-			{
-				"S",
-				mode = { "n", "o", "x" },
-				function()
-					require("flash").treesitter()
-				end,
-				desc = "Flash Treesitter",
-			},
-			{
-				"r",
-				mode = "o",
-				function()
-					require("flash").remote()
-				end,
-				desc = "Remote Flash",
-			},
-			{
-				"R",
-				mode = { "o", "x" },
-				function()
-					require("flash").treesitter_search()
-				end,
-				desc = "Flash Treesitter Search",
-			},
-			{
-				"<c-s>",
-				mode = { "c" },
-				function()
-					require("flash").toggle()
-				end,
-				desc = "Toggle Flash Search",
-			},
-		},
+		keys = function()
+			return require("plugins.folke.keys")
+		end,
 	},
+	--  Maybe after closind Nullls
+	-- {
+	-- 	"mhartington/formatter.nvim",
+	-- 	event = "VeryLazy",
+	-- 	opts = function()
+	-- 		return require("plugins.formatter")
+	-- 	end,
+	-- },
+	--
+	-- Another prettier
+	-- {"stevearc/conform.nvim",
+	-- 	-- 	opts = function()
+	-- 		return require("plugins.conform-formatter")
+	-- 	end,
+	-- },
 })
