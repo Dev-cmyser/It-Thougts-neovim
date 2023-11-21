@@ -29,6 +29,10 @@ require("lazy").setup({
 	{ "rebelot/kanagawa.nvim" },
 	{ "cooperuser/glowbeam.nvim" },
 
+	-- Manager for  Installing plugins and lsp
+	{ "williamboman/mason.nvim" },
+	{ "williamboman/mason-lspconfig.nvim" },
+
 	-- LSP, cmp  and treesitter
 	{ "nvim-treesitter/nvim-treesitter" },
 	{ "neovim/nvim-lspconfig" },
@@ -55,9 +59,6 @@ require("lazy").setup({
 			"linrongbin16/lsp-progress.nvim",
 		},
 	},
-
-	-- Manager for  Installing plugins and lsp
-	{ "williamboman/mason.nvim" },
 
 	-- Blamer - show git sign anywhere
 	{
