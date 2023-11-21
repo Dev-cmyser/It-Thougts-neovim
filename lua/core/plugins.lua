@@ -12,6 +12,8 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+	-- Copilot
+	{ "github/copilot.vim" },
 	-- Search by filename and by content
 	{
 		"nvim-telescope/telescope.nvim",
