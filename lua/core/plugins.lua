@@ -60,8 +60,6 @@ require("lazy").setup({
 	-- Blamer - show git sign anywhere
 	{
 		"APZelos/blamer.nvim",
-		cmd = { "Blamer" },
-		-- event = "User AstroFile",
 		lazy = false,
 		config = function()
 			vim.g.blamer_delay = 900

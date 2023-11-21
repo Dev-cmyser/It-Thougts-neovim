@@ -40,6 +40,7 @@ vim.keymap.set("n", "<leader>X", ":BufferLinePickClose<CR>")
 vim.keymap.set("n", "<leader>s", ":Neotree show reveal <CR>")
 
 vim.keymap.set("i", "jj", "<Esc>")
+vim.keymap.set("i", "j<leader>", "<Esc>")
 
 vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>")
 
