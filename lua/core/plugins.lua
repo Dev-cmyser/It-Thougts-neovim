@@ -17,7 +17,7 @@ require("lazy").setup({
 	-- Search by filename and by content
 	{
 		"nvim-telescope/telescope.nvim",
-		tag = "0.1.1",
+		tag = "0.1.4",
 		dependencies = { "nvim-lua/plenary.nvim" },
 	},
 	-- Zen mode to try :ZenMode
