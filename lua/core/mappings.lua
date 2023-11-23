@@ -1,62 +1,83 @@
+local map = vim.keymap.set
+
 vim.g.mapleader = " "
 
 -- NeoTree
-vim.keymap.set("n", "<leader>e", ":Neotree toggle<CR>")
-vim.keymap.set("n", "<leader>o", ":Neotree float git_status<CR>")
+map("n", "<leader>e", ":Neotree toggle<CR>")
+map("n", "<leader>o", ":Neotree float git_status<CR>")
 
 -- Navigation
-vim.keymap.set("n", "<c-k>", ":wincmd k<CR>")
-vim.keymap.set("n", "<c-j>", ":wincmd j<CR>")
-vim.keymap.set("n", "<c-h>", ":wincmd h<CR>")
-vim.keymap.set("n", "<c-l>", ":wincmd l<CR>")
-vim.keymap.set("n", "<leader>/", ":CommentToggle<CR>")
-vim.keymap.set("v", "<leader>/", ":CommentToggle<CR>")
+map("n", "<c-k>", ":wincmd k<CR>")
+map("n", "<c-j>", ":wincmd j<CR>")
+map("n", "<c-h>", ":wincmd h<CR>")
+map("n", "<c-l>", ":wincmd l<CR>")
+map("n", "<leader>/", ":CommentToggle<CR>")
+map("v", "<leader>/", ":CommentToggle<CR>")
 
 -- Splits
-vim.keymap.set("n", "|", ":vsplit<CR>")
-vim.keymap.set("n", "\\", ":split<CR>")
+map("n", "|", ":vsplit<CR>")
+map("n", "\\", ":split<CR>")
 
 -- Other
-vim.keymap.set("n", "<s-J>", "")
-vim.keymap.set("v", "<s-J>", "")
-vim.keymap.set("n", "<leader>w", ":w<CR>")
+map("n", "<s-J>", "")
+map("v", "<s-J>", "")
+map("n", "<leader>w", ":w<CR>")
 
 -- свернуть все
-vim.keymap.set("n", "<leader>1", ":set foldlevel=1<CR>")
-vim.keymap.set("n", "<leader>2", ":set foldlevel=2<CR>")
-vim.keymap.set("n", "<leader>3", ":set foldlevel=3<CR>")
-vim.keymap.set("n", "<leader>4", ":set foldlevel=4<CR>")
-vim.keymap.set("n", "<leader>5", ":set foldlevel=5<CR>")
-vim.keymap.set("n", "<leader>6", ":set foldlevel=6<CR>")
-vim.keymap.set("n", "<leader>7", ":set foldlevel=7<CR>")
-vim.keymap.set("n", "<leader>8", ":set foldlevel=8<CR>")
+map("n", "<leader>1", ":set foldlevel=1<CR>")
+map("n", "<leader>2", ":set foldlevel=2<CR>")
+map("n", "<leader>3", ":set foldlevel=3<CR>")
+map("n", "<leader>4", ":set foldlevel=4<CR>")
+map("n", "<leader>5", ":set foldlevel=5<CR>")
+map("n", "<leader>6", ":set foldlevel=6<CR>")
+map("n", "<leader>7", ":set foldlevel=7<CR>")
+map("n", "<leader>8", ":set foldlevel=8<CR>")
 
 -- delete buffer
 vim.api.nvim_set_keymap("n", "<leader>c", ":lua _G.close_and_go_right()<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "<leader>x", ":BufferLineSortByTabs<CR>:BufferLineCloseRight<CR>")
-vim.keymap.set("n", "<leader>X", ":BufferLinePickClose<CR>")
+map("n", "<leader>x", ":BufferLineSortByTabs<CR>:BufferLineCloseRight<CR>")
+map("n", "<leader>X", ":BufferLinePickClose<CR>")
 
 -- show file in three
-vim.keymap.set("n", "<leader>s", ":Neotree show reveal <CR>")
+map("n", "<leader>s", ":Neotree show reveal <CR>")
 
-vim.keymap.set("i", "jj", "<Esc>")
-vim.keymap.set("i", "j<leader>", "<Esc>")
+map("i", "jj", "<Esc>")
+map("i", "j<leader>", "<Esc>")
 
-vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>")
+map("n", "<leader>h", ":nohlsearch<CR>")
 
-vim.keymap.set("i", "<C-j>", function()
+map("i", "<C-j>", function()
 	return vim.fn["codeium#Accept"]()
 end, { expr = true })
 
 -- Change buffers
-vim.keymap.set("n", "<Tab>", ":BufferLineCycleNext<CR>:Neotree show reveal <CR>")
-vim.keymap.set("n", "<s-Tab>", ":BufferLineCyclePrev<CR>:Neotree show reveal <CR>")
+map("n", "<Tab>", ":BufferLineCycleNext<CR>:Neotree show reveal <CR>")
+map("n", "<s-Tab>", ":BufferLineCyclePrev<CR>:Neotree show reveal <CR>")
 
-vim.keymap.set("n", "<s-H>", ":BufferLineCyclePrev<CR>:Neotree show reveal <CR>")
-vim.keymap.set("n", "<s-L>", ":BufferLineCycleNext<CR>:Neotree show reveal <CR>")
+map("n", "<s-H>", ":BufferLineCyclePrev<CR>:Neotree show reveal <CR>")
+map("n", "<s-L>", ":BufferLineCycleNext<CR>:Neotree show reveal <CR>")
 
 -- Terminal
-vim.keymap.set("n", "<F7>", ":ToggleTerm direction=float<CR>")
-vim.keymap.set("n", "<leader>j", ":ToggleTerm direction=float<CR>")
-vim.keymap.set("n", "<leader>th", ":ToggleTerm direction=horizontal<CR>")
-vim.keymap.set("n", "<leader>tv", ":ToggleTerm direction=vertical size=40<CR>")
+map("n", "<F7>", ":ToggleTerm direction=float<CR>")
+map("n", "<leader>j", ":ToggleTerm direction=float<CR>")
+map("n", "<leader>th", ":ToggleTerm direction=horizontal<CR>")
+map("n", "<leader>tv", ":ToggleTerm direction=vertical size=40<CR>")
+
+-- В ванильном виме j/k переходят по реальным строкам (в смысле, номера которых показываются по set number),
+-- а gj/gk по экранным (или отображаемым, не знаю, как правильно).
+-- То есть, если все строки скажем, по 100 символов, а ширина окна/терминала 40,
+-- то j/k будут прыгать, получается, на две или три экранные строки за раз,
+-- а gj/gk -- по одной.
+-- Есть популярное простое решение nnoremap j gj, которое заставляет j тоже ходить по экранным строкам (ну и для k аналогично)
+-- но такое решение убивает полезность relativenumber,
+-- потому что (при узком окне) движения вроде 3j будут перемещать курсор на несколько экранных строк, а не туда, куда показывает relative number.
+-- А вот такой ремап с условным выражением проверяет, есть ли число перед j; если нет,
+-- двигает курсор на одну экранную строку вниз, а если есть, на соответствующее число реальных строк.
+map("n", "j", "v:count == 0 ? 'gj' : 'j'", {
+	expr = true,
+	desc = "Move cursor down (display and real line)",
+})
+map("n", "k", "v:count == 0 ? 'gk' : 'k'", {
+	expr = true,
+	desc = "Move cursor up (display and real line)",
+})
