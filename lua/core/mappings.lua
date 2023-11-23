@@ -57,5 +57,6 @@ vim.keymap.set("n", "<s-L>", ":BufferLineCycleNext<CR>:Neotree show reveal <CR>"
 
 -- Terminal
 vim.keymap.set("n", "<F7>", ":ToggleTerm direction=float<CR>")
+vim.keymap.set("n", "<leader>j", ":ToggleTerm direction=float<CR>")
 vim.keymap.set("n", "<leader>th", ":ToggleTerm direction=horizontal<CR>")
 vim.keymap.set("n", "<leader>tv", ":ToggleTerm direction=vertical size=40<CR>")
