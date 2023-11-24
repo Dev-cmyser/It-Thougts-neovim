@@ -30,6 +30,6 @@ _G.close_and_go_right = function()
 	end
 
 	-- Переходим к выбранному буферу и закрываем текущий
-	vim.cmd("buffer " .. next_bufnr)
-	vim.cmd("bdelete " .. current_buf)
+	vim.cmd("buffer " .. next_bufnr .. "\nNeotree show reveal")
+	vim.cmd("bdelete " .. current_buf .. "\nNeotree show reveal")
 end
