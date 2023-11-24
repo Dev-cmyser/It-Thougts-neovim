@@ -47,9 +47,9 @@ vim.api.nvim_create_autocmd("LspAttach", {
 
 		local opts = { buffer = ev.buf }
 		vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
-		vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
+		vim.keymap.set("n", "<C-k>", vim.lsp.buf.hover, opts)
 		vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
-		vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, opts)
+		vim.keymap.set("n", "<C-i>", vim.lsp.buf.signature_help, opts)
 		-- vim.keymap
 		--     .set('n', '<Leader>sa', vim.lsp.buf.add_workspace_folder, opts)
 		-- vim.keymap.set('n', '<Leader>sr', vim.lsp.buf.remove_workspace_folder,

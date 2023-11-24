@@ -7,6 +7,8 @@ vim.opt.showmode = false
 vim.opt.updatetime = 100
 vim.wo.signcolumn = "yes"
 vim.opt.scrolloff = 20
+
+
 vim.opt.wrap = false
 vim.wo.linebreak = true
 vim.opt.virtualedit = "block"
@@ -43,17 +45,6 @@ vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.smartindent = true
 
--- Fillchars
-vim.opt.fillchars = {
-	vert = "│",
-	fold = "⠀",
-	eob = " ", -- suppress ~ at EndOfBuffer
-	-- diff = "⣿", -- alternatives = ⣿ ░ ─ ╱
-	msgsep = "‾",
-	foldopen = "▾",
-	foldsep = "│",
-	foldclose = "▸",
-}
 
 vim.cmd([[highlight clear LineNr]])
 vim.cmd([[highlight clear SignColumn]])

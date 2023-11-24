@@ -2,6 +2,7 @@ local map = vim.keymap.set
 
 vim.g.mapleader = " "
 
+
 -- NeoTree
 map("n", "<leader>e", ":Neotree toggle<CR>")
 map("n", "<leader>o", ":Neotree float git_status<CR>")
@@ -19,8 +20,6 @@ map("n", "|", ":vsplit<CR>")
 map("n", "\\", ":split<CR>")
 
 -- Other
-map("n", "<s-J>", "")
-map("v", "<s-J>", "")
 map("n", "<leader>w", ":w<CR>")
 
 -- свернуть все
@@ -81,3 +80,7 @@ map("n", "k", "v:count == 0 ? 'gk' : 'k'", {
 	expr = true,
 	desc = "Move cursor up (display and real line)",
 })
+
+-- Fold
+map("n", "<s-J>", ":foldopen<CR>")
+map("n", "<s-K>", ":foldclose<CR>")
