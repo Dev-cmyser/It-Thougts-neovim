@@ -12,6 +12,13 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+	{
+		"folke/todo-comments.nvim",
+		dependencies = { "nvim-lua/plenary.nvim" },
+		opts = function()
+			return require("plugins.folke.flash-comments")
+		end,
+	},
 	-- Copilot
 	{ "github/copilot.vim" },
 	-- Search by filename and by content
@@ -124,7 +131,7 @@ require("lazy").setup({
 		---@type Flash.Config
 		opts = {},
 		keys = function()
-			return require("plugins.folke.keys")
+			return require("plugins.folke.flash-keys")
 		end,
 	},
 	--  Maybe after closind Nullls
