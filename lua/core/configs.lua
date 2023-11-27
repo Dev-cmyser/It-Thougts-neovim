@@ -8,7 +8,6 @@ vim.opt.updatetime = 100
 vim.wo.signcolumn = "yes"
 vim.opt.scrolloff = 20
 
-
 vim.opt.wrap = false
 vim.wo.linebreak = true
 vim.opt.virtualedit = "block"
@@ -23,6 +22,7 @@ vim.wo.foldlevel = 99
 -- Mouse
 vim.opt.mouse = "a"
 vim.opt.mousefocus = true
+vim.opt.mousehide = true -- Спрятать курсор мыши когда набираем текст
 
 -- Line Numbers
 vim.opt.number = true
@@ -44,7 +44,7 @@ vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.smartindent = true
-
+vim.opt.textwidth = 80
 
 vim.cmd([[highlight clear LineNr]])
 vim.cmd([[highlight clear SignColumn]])
