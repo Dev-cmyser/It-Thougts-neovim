@@ -2,7 +2,6 @@ local map = vim.keymap.set
 
 vim.g.mapleader = " "
 
-
 -- NeoTree
 map("n", "<leader>e", ":Neotree toggle<CR>")
 map("n", "<leader>o", ":Neotree float git_status<CR>")
@@ -21,6 +20,7 @@ map("n", "\\", ":split<CR>")
 
 -- Other
 map("n", "<leader>w", ":w<CR>")
+map("i", "<leader>w", "<Esc>:w<CR>")
 
 -- свернуть все
 map("n", "<leader>1", ":set foldlevel=0<CR>")
