@@ -31,7 +31,6 @@ vim.opt.relativenumber = true
 -- Splits
 vim.opt.splitbelow = true
 vim.opt.splitright = true
-
 -- Clipboard
 vim.opt.clipboard = "unnamedplus"
 vim.api.nvim_set_keymap("x", "p", '"_dP', { noremap = true, silent = true })

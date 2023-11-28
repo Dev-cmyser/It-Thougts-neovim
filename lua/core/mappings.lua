@@ -80,7 +80,8 @@ map("n", "k", "v:count == 0 ? 'gk' : 'k'", {
 	expr = true,
 	desc = "Move cursor up (display and real line)",
 })
-
+-- Other
+map("v", "<s-J>", "")
 -- Fold
 map("n", "<s-J>", ":foldopen<CR>")
 map("n", "<s-K>", ":foldclose<CR>")
