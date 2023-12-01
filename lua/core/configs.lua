@@ -5,8 +5,8 @@ vim.opt.updatetime = 100
 vim.wo.signcolumn = "yes"
 vim.opt.scrolloff = 20
 
-vim.opt.wrap = false
-vim.wo.linebreak = true
+vim.opt.wrap = true -- Включить перенос строк, игнорируя целостность слов
+-- vim.opt.linebreak = true -- Включить перенос строк, сохраняя целостность слов
 vim.opt.virtualedit = "block"
 vim.opt.undofile = true
 vim.opt.shell = "/bin/zsh"
