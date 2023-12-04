@@ -5,6 +5,7 @@ vim.opt.updatetime = 100
 vim.wo.signcolumn = "yes"
 vim.opt.scrolloff = 20
 
+-- vim.opt.cmdheight = 0 -- ОТключить полосу внизу где символ и строка
 vim.opt.wrap = true -- Включить перенос строк, игнорируя целостность слов
 -- vim.opt.linebreak = true -- Включить перенос строк, сохраняя целостность слов
 vim.opt.virtualedit = "block"

@@ -20,7 +20,7 @@ require("lazy").setup({
 		end,
 	},
 	-- Copilot
-	{ "github/copilot.vim" },
+	-- { "github/copilot.vim" },
 	-- Search by filename and by content
 	{
 		"nvim-telescope/telescope.nvim",
@@ -30,6 +30,10 @@ require("lazy").setup({
 	-- Zen mode to try :ZenMode
 	{ "folke/zen-mode.nvim", lazy = false },
 
+    -- Diffview
+    {
+        "sindrets/diffview.nvim",
+    },
 	-- Color schemes
 	{ "rmehri01/onenord.nvim" },
 	{ "joshdick/onedark.vim" },

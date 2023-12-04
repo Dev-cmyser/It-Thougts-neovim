@@ -1,12 +1,22 @@
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
--- Sntup language servers.
+-- Setup language servers.
 local lspconfig = require("lspconfig")
-lspconfig.pyright.setup({})
-lspconfig.tsserver.setup({})
-lspconfig.prismals.setup({})
+lspconfig.tsserver.setup({
+	capabilities = capabilities,
+	filetypes = {
+		"javascript",
+		"javascriptreact",
+		"javascript.jsx",
+		"typescript",
+		"typescriptreact",
+		"typescript.tsx",
+		"vue",
+	},
+})
 lspconfig.cssls.setup({
 	capabilities = capabilities,
+	filetypes = { "css", "scss", "less" },
 })
 lspconfig.golangci_lint_ls.setup({})
 lspconfig.rust_analyzer.setup({
