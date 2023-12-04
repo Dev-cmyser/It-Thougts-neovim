@@ -8,7 +8,8 @@ require("core.utils")
 
 -- Plugins config
 require("plugins.telescope")
-require("plugins.lsp")
+require("plugins.lsp.lsp")
+require("plugins.lsp.volar")
 require("plugins.mason")
 require("plugins.cmp")
 require("plugins.nullls")
