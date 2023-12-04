@@ -2,8 +2,11 @@ local map = vim.keymap.set
 
 vim.g.mapleader = " "
 
+-- Zen mode
+map("n", "<leader>z", ":TZAtaraxis<CR>")
 -- NeoTree
-map("n", "<leader>e", ":Neotree toggle<CR>")
+map("n", "<leader>E", ":Neotree float  reveal toggle<CR>")
+map("n", "<leader>e", ":Neotree left toggle<CR>")
 map("n", "<leader>o", ":Neotree float git_status<CR>")
 
 -- Navigation
@@ -49,7 +52,7 @@ map("i", "<C-j>", function()
 	return vim.fn["codeium#Accept"]()
 end, { expr = true })
 
--- Change buffers
+-- Change buffers you can add :Neotree show reveal <CR>  for Neotree left
 map("n", "<Tab>", ":BufferLineCycleNext<CR>:Neotree show reveal <CR>")
 map("n", "<s-Tab>", ":BufferLineCyclePrev<CR>:Neotree show reveal <CR>")
 

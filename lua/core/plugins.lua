@@ -28,12 +28,12 @@ require("lazy").setup({
 		dependencies = { "nvim-lua/plenary.nvim" },
 	},
 	-- Zen mode to try :ZenMode
-	{ "folke/zen-mode.nvim", lazy = false },
+	{ "pocco81/true-zen.nvim", lazy = false },
 
-    -- Diffview
-    {
-        "sindrets/diffview.nvim",
-    },
+	-- Diffview
+	{
+		"sindrets/diffview.nvim",
+	},
 	-- Color schemes
 	{ "rmehri01/onenord.nvim" },
 	{ "joshdick/onedark.vim" },
