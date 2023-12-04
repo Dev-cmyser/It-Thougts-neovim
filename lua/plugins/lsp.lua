@@ -21,15 +21,15 @@ lspconfig.rust_analyzer.setup({
 		},
 	},
 })
-lspconfig.volar.setup({
-	init_options = {
-		typescript = {
-			-- tsdk = "/path/to/.npm/lib/node_modules/typescript/lib",
-			-- Alternative location if installed as root:
-			tsdk = "/home/cmyser/.nvm/versions/node/v20.9.0/lib/node_modules/typescript/lib",
-		},
-	},
-})
+-- lspconfig.volar.setup({
+-- 	init_options = {
+-- 		typescript = {
+-- 			-- tsdk = "/path/to/.npm/lib/node_modules/typescript/lib",
+-- 			-- Alternative location if installed as root:
+-- 			tsdk = "/home/cmyser/.nvm/versions/node/v20.9.0/lib/node_modules/typescript/lib",
+-- 		},
+-- 	},
+-- })
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
 vim.keymap.set("n", "<leader>ld", vim.diagnostic.open_float)
