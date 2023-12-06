@@ -5,8 +5,8 @@ vim.g.mapleader = " "
 -- Zen mode
 map("n", "<leader>z", ":TZAtaraxis<CR>")
 -- NeoTree
-map("n", "<leader>E", ":Neotree float  reveal toggle<CR>")
-map("n", "<leader>e", ":Neotree left toggle<CR>")
+map("n", "<leader>e", ":Neotree float  reveal toggle<CR>")
+map("n", "E", ":Neotree left toggle<CR>")
 map("n", "<leader>o", ":Neotree float git_status<CR>")
 
 -- Navigation
@@ -56,8 +56,8 @@ end, { expr = true })
 map("n", "<Tab>", ":BufferLineCycleNext<CR>:Neotree show reveal <CR>")
 map("n", "<s-Tab>", ":BufferLineCyclePrev<CR>:Neotree show reveal <CR>")
 
-map("n", "<s-H>", ":BufferLineCyclePrev<CR>:Neotree show reveal <CR>")
-map("n", "<s-L>", ":BufferLineCycleNext<CR>:Neotree show reveal <CR>")
+map("n", "<s-H>", ":BufferLineCyclePrev<CR>")
+map("n", "<s-L>", ":BufferLineCycleNext<CR>")
 
 -- Terminal
 map("n", "<F7>", ":ToggleTerm direction=float<CR>")

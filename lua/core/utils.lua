@@ -29,7 +29,8 @@ _G.close_and_go_right = function()
 		end
 	end
 
-	-- Переходим к выбранному буферу и закрываем текущий
-	vim.cmd("buffer " .. next_bufnr .. "\nNeotree show reveal")
-	vim.cmd("bdelete " .. current_buf .. "\nNeotree show reveal")
+	-- Переходим к выбранному буферу и закрываем текущий You can add '.. "\nNeotree show reveal"' for left neotree
+	-- vim.cmd("buffer " .. next_bufnr .. "\nNeotree show reveal")
+	vim.cmd("buffer " .. next_bufnr)
+	vim.cmd("bdelete " .. current_buf)
 end
