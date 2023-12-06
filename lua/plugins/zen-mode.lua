@@ -21,19 +21,23 @@ require("true-zen").setup({
 				open_pre = function()
 					ShowBufferline()
 					vim.wo.relativenumber = true -- включить относительные номера строк после открытия Ataraxis
+					vim.opt.number = true
 				end,
 
 				open_pos = function()
 					ShowBufferline()
 					vim.wo.relativenumber = true -- включить относительные номера строк после открытия Ataraxis
+					vim.opt.number = true
 				end,
 				close_pre = function()
 					ShowBufferline()
 					vim.wo.relativenumber = true -- включить относительные номера строк после открытия Ataraxis
+					vim.opt.number = true
 				end,
 
 				close_pos = function()
 					vim.wo.relativenumber = true -- выключить относительные номера строк после закрытия Ataraxis
+					vim.opt.number = true
 				end,
 			},
 		},
