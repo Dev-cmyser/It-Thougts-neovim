@@ -3,7 +3,7 @@ vim.g.formatoptions = "qrn1"
 vim.opt.showmode = false
 vim.opt.updatetime = 100
 vim.wo.signcolumn = "yes"
-vim.opt.scrolloff = 40
+vim.opt.scrolloff = 20
 
 -- vim.opt.cmdheight = 0 -- ОТключить полосу внизу где символ и строка
 vim.opt.wrap = true -- Включить перенос строк, игнорируя целостность слов
