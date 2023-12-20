@@ -5,6 +5,7 @@ require("core.plugins")
 require("core.colors")
 require("core.configs")
 require("core.utils")
+require("core.autocmd")
 
 -- Plugins config
 require("plugins.telescope")
