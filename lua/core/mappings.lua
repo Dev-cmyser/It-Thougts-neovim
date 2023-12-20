@@ -1,5 +1,8 @@
 local map = vim.keymap.set
 
+-- Отключение клавиши '.'
+map("n", ".", "<Nop>", { silent = true })
+
 vim.g.mapleader = " "
 
 -- Zen mode
