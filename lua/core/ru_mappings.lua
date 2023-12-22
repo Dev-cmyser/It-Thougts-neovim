@@ -56,8 +56,8 @@ map("v", "н", "yy")
 map("n", "к", "r")
 
 -- Пермещение между вкладками ( буфферами )
-map("n", "Р", ":BufferLineCyclePrev<CR>:Neotree show reveal<CR>")
-map("n", "Д", ":BufferLineCycleNext<CR>:Neotree show reveal<CR>")
+map("n", "Р", ":BufferLineCyclePrev<CR>")
+map("n", "Д", ":BufferLineCycleNext<CR>")
 
 -- Закрытие всех буферов
 map("n", "<leader>ч", ":BufferLineSortByTabs<CR>:BufferLineCloseRight<CR>")

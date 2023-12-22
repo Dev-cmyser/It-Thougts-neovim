@@ -56,8 +56,8 @@ map("i", "<C-j>", function()
 end, { expr = true })
 
 -- Change buffers you can add :Neotree show reveal <CR>  for Neotree left
-map("n", "<Tab>", ":BufferLineCycleNext<CR>:Neotree show reveal <CR>")
-map("n", "<s-Tab>", ":BufferLineCyclePrev<CR>:Neotree show reveal <CR>")
+map("n", "<Tab>", ":BufferLineCycleNext<CR>:Neotree left show reveal <CR>")
+map("n", "<s-Tab>", ":BufferLineCyclePrev<CR>:Neotree left show reveal <CR>")
 
 map("n", "<s-H>", ":BufferLineCyclePrev<CR>")
 map("n", "<s-L>", ":BufferLineCycleNext<CR>")
