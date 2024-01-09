@@ -71,7 +71,7 @@ map("n", "М", "V")
 map("v", "М", "V")
 
 -- Дерево
-map("n", "<leader>у", ":Neotree toggle<CR>")
+map("n", "<leader>у", ":Neotree float  reveal toggle<CR>")
 map("n", "<leader>щ", ":Neotree float git_status<CR>")
 
 -- Команды

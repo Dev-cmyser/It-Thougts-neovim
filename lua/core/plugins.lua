@@ -19,6 +19,10 @@ require("lazy").setup({
 			return require("plugins.folke.flash-comments")
 		end,
 	},
+	{
+		"airblade/vim-gitgutter",
+		lazy = false,
+	},
 	-- Copilot
 	-- { "github/copilot.vim" },
 	-- Search by filename and by content
