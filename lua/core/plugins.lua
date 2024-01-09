@@ -20,9 +20,13 @@ require("lazy").setup({
 		end,
 	},
 	{
-		"airblade/vim-gitgutter",
+		"lewis6991/gitsigns.nvim",
 		lazy = false,
 	},
+	-- {
+	-- 	"airblade/vim-gitgutter",
+	-- 	lazy = false,
+	-- },
 	-- Copilot
 	-- { "github/copilot.vim" },
 	-- Search by filename and by content
@@ -44,7 +48,6 @@ require("lazy").setup({
 	{ "rebelot/kanagawa.nvim" },
 	{ "cooperuser/glowbeam.nvim" },
 
-	-- Manager for  Installing plugins and lsp
 	{ "williamboman/mason.nvim" },
 	{ "williamboman/mason-lspconfig.nvim" },
 
