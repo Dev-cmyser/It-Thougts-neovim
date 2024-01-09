@@ -23,10 +23,6 @@ require("lazy").setup({
 		"lewis6991/gitsigns.nvim",
 		lazy = false,
 	},
-	-- {
-	-- 	"airblade/vim-gitgutter",
-	-- 	lazy = false,
-	-- },
 	-- Copilot
 	-- { "github/copilot.vim" },
 	-- Search by filename and by content
