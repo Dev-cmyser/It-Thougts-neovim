@@ -1,5 +1,4 @@
 -- Удалять пустой буфер, который появляется после открытия  файла в Neotree
-
 vim.api.nvim_create_autocmd("BufHidden", {
 	desc = "Delete [No Name] buffers",
 	callback = function(data)
