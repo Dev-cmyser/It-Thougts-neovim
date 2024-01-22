@@ -5,8 +5,8 @@ vim.opt.updatetime = 100
 vim.wo.signcolumn = "yes"
 vim.opt.scrolloff = 40
 
-vim.opt.wrap = true -- Включить перенос строк, игнорируя целостность слов
--- vim.opt.linebreak = true -- Включить перенос строк, сохраняя целостность слов
+-- vim.opt.wrap = true -- Включить перенос строк, игнорируя целостность слов
+vim.opt.linebreak = true -- Включить перенос строк, сохраняя целостность слов
 vim.opt.virtualedit = "block"
 vim.opt.undofile = true
 vim.opt.shell = "/bin/zsh"
@@ -41,6 +41,11 @@ vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.smartindent = true
 vim.opt.textwidth = 80
+
+-- Search
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+vim.opt.cmdheight = 1
 
 vim.cmd([[highlight clear LineNr]])
 vim.cmd([[highlight clear SignColumn]])
