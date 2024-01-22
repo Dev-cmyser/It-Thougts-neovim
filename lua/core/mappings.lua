@@ -54,13 +54,6 @@ map("n", "<leader>h", ":nohlsearch<CR>")
 map("i", "<C-j>", function()
 	return vim.fn["codeium#Accept"]()
 end, { expr = true })
-
-map("i", "<C-n>", function()
-	return vim.fn["codeium#CycleCompletions(1)"]()
-end, { expr = true })
-map("i", "<C-m>", function()
-	return vim.fn["codeium#CycleCompletions(-1)"]()
-end, { expr = true })
 -- Change buffers you can add :Neotree show reveal <CR>  for Neotree left
 map("n", "<Tab>", ":BufferLineCycleNext<CR>:Neotree left show reveal <CR>")
 map("n", "<s-Tab>", ":BufferLineCyclePrev<CR>:Neotree left show reveal <CR>")
