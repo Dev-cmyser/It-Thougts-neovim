@@ -13,5 +13,7 @@ require("sonarlint").setup({
 	filetypes = {
 		-- Tested and working
 		"typescript",
+		"ts",
+		"javascript",
 	},
 })
