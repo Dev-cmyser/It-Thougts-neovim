@@ -1,3 +1,4 @@
+vim.loader.enable()
 -- Basic config
 require("core.mappings")
 require("core.ru_mappings")
