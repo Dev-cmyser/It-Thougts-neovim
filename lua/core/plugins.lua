@@ -17,17 +17,17 @@ require("lazy").setup({
 		main = "ibl",
 		opts = {},
 	},
-	{
-		"folke/todo-comments.nvim",
-		dependencies = { "nvim-lua/plenary.nvim" },
-		opts = function()
-			return require("plugins.folke.flash-comments")
-		end,
-	},
-	{
-		"lewis6991/gitsigns.nvim",
-		lazy = false,
-	},
+	-- {
+	-- 	"folke/todo-comments.nvim",
+	-- 	dependencies = { "nvim-lua/plenary.nvim" },
+	-- 	opts = function()
+	-- 		return require("plugins.folke.flash-comments")
+	-- 	end,
+	-- },
+	-- {
+	-- 	"lewis6991/gitsigns.nvim",
+	-- 	lazy = false,
+	-- },
 	-- Copilot
 	-- { "github/copilot.vim" },
 	-- Search by filename and by content
@@ -37,17 +37,17 @@ require("lazy").setup({
 		dependencies = { "nvim-lua/plenary.nvim" },
 	},
 	-- Zen mode to try :ZenMode
-	{ "pocco81/true-zen.nvim", lazy = false },
+	-- { "pocco81/true-zen.nvim", lazy = false },
 
 	-- Diffview
 	{
 		"sindrets/diffview.nvim",
 	},
 	-- Color schemes
-	{ "rmehri01/onenord.nvim" },
-	{ "joshdick/onedark.vim" },
+	-- { "rmehri01/onenord.nvim" },
+	-- { "joshdick/onedark.vim" },
 	{ "rebelot/kanagawa.nvim" },
-	{ "cooperuser/glowbeam.nvim" },
+	-- { "cooperuser/glowbeam.nvim" },
 
 	{ "williamboman/mason.nvim" },
 	{ "williamboman/mason-lspconfig.nvim" },
@@ -80,19 +80,19 @@ require("lazy").setup({
 	},
 
 	-- Blamer - show git sign anywhere
-	{
-		"APZelos/blamer.nvim",
-		lazy = false,
-		config = function()
-			vim.g.blamer_delay = 900
-			vim.g.blamer_show_in_insert_modes = 0
-			vim.g.blamer_prefix = " > "
-			vim.g.blamer_show_in_visual_modes = 0
-			vim.g.blamer_enabled = 1
-			-- vim.o.highlight Blamer g uifg="lightgrey"
-		end,
-	},
-
+	-- {
+	-- 	"APZelos/blamer.nvim",
+	-- 	lazy = false,
+	-- 	config = function()
+	-- 		vim.g.blamer_delay = 900
+	-- 		vim.g.blamer_show_in_insert_modes = 0
+	-- 		vim.g.blamer_prefix = " > "
+	-- 		vim.g.blamer_show_in_visual_modes = 0
+	-- 		vim.g.blamer_enabled = 1
+	-- 		-- vim.o.highlight Blamer g uifg="lightgrey"
+	-- 	end,
+	-- },
+	--
 	-- Terminal float
 	{ "akinsho/toggleterm.nvim", version = "*", config = true },
 
@@ -103,7 +103,7 @@ require("lazy").setup({
 	{ "terrortylor/nvim-comment" },
 
 	-- Autotag for html
-	{ "windwp/nvim-ts-autotag" },
+	-- { "windwp/nvim-ts-autotag" },
 
 	-- Tree for files
 	{
@@ -120,10 +120,10 @@ require("lazy").setup({
 	{ "akinsho/bufferline.nvim", dependencies = { "nvim-tree/nvim-web-devicons" } },
 
 	-- Codeium
-	{
-		"Exafunction/codeium.vim",
-		lazy = false,
-	},
+	-- {
+	-- 	"Exafunction/codeium.vim",
+	-- 	lazy = false,
+	-- },
 	-- Dashboard
 	{
 		"glepnir/dashboard-nvim",
