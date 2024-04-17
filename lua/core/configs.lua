@@ -36,17 +36,16 @@ vim.opt.shortmess:append("c")
 
 -- Indent Settings
 vim.opt.expandtab = true
-vim.opt.shiftwidth = 4
-vim.opt.tabstop = 4
+vim.opt.shiftwidth = 2
+vim.opt.tabstop = 2
 
-vim.opt.softtabstop = 4
+vim.opt.softtabstop = 2
 vim.opt.smartindent = true
 vim.opt.textwidth = 80
 
 -- Search
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
-vim.opt.cmdheight = 1
 
 vim.cmd([[highlight clear LineNr]])
 vim.cmd([[highlight clear SignColumn]])
