@@ -8,16 +8,10 @@ lspconfig.pyright.setup({})
 lspconfig.tsserver.setup({
 	filetypes = { "javascript", "typescript" },
 	handlers = {
-		["textDocument/hover"] = vim.lsp.with(
-			vim.lsp.handlers.hover,
-			{
-				border = "rounded",
-				max_width = 80,
-				max_height = 20,
-				max_concurrent_servers = 5,
-				max_memory = 8 * 1024 * 1024 * 1024,
-			}
-		),
+		["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
+			max_concurrent_servers = 1,
+			max_memory = 8 * 1024 * 1024 * 1024,
+		}),
 	},
 })
 -- lspconfig.volar.setup({
