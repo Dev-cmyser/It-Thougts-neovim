@@ -16,6 +16,7 @@ vim.opt.swapfile = false
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 vim.wo.foldlevel = 99
+
 -- Mouse
 vim.opt.mouse = "a"
 vim.opt.mousefocus = true
