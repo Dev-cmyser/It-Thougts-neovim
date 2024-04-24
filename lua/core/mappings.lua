@@ -7,6 +7,7 @@ vim.g.mapleader = " "
 
 -- Zen mode
 map("n", "<leader>z", ":TZAtaraxis<CR>")
+map("n", "<c-z>", ":q<CR>")
 -- NeoTree
 map("n", "<leader>e", ":Neotree float  reveal toggle<CR>")
 map("n", "E", ":Neotree left toggle<CR>")

@@ -58,3 +58,9 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		end, opts)
 	end,
 })
+
+on_exit = function(_, code, _)
+	if code ~= 0 then
+		vim.cmd("q!")
+	end
+end
